@@ -1,3 +1,8 @@
+require "net/https"
+require "net/http"
+require "uri"
+require "json"
+require "securerandom"
 require "pubnub/publisher/version"
 
 module Pubnub
