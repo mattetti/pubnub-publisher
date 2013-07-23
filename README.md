@@ -97,6 +97,8 @@ end
 
 ## TODOs
 
+* support for cipher, aes and other options that aren't currently
+supported.
 * Use a thread pool to go non blocking publishing.
 * use a persistent http connection to pubnub.
 
