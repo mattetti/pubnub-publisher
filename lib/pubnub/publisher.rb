@@ -47,6 +47,10 @@ module Pubnub
       instance
     end
 
+    def self.publish_key; @publish_key end
+    def self.subscribe_key; @subscribe_key end
+    def self.ssl; @ssl end
+
     def initialize(opts={})
       opts.each do |k,v|
         next unless CONFIG_KEYS.include?(k)

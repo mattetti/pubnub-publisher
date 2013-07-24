@@ -56,6 +56,12 @@ describe Pubnub::Publisher do
       expect(pub_client.ssl).to be_true
     end
 
+    it "has some global getters" do
+      Pubnub::Publisher.setup(publish_key: "pub key", subscribe_key: "sub key", ssl: false)
+      expect(Pubnub::Publisher.publish_key).to eql("pub key")
+      expect(Pubnub::Publisher.subscribe_key).to eql("sub key")
+    end
+
   end
 
   context "new instance" do
