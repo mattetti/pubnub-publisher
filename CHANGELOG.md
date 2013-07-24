@@ -1,7 +1,9 @@
 # Changelog
 
-* 1.0.1 added `Pubnub::Publisher.publish_key`,
+* 1.0.2 Fixed a bug in the way the query was escaped.
+
+* 1.0.1 Added `Pubnub::Publisher.publish_key`,
 `Pubnub::Publisher.subscribe`, and `Pubnub::Publisher.ssl` accessors so
 we can easily accessed the shared config main keys.
 
-* 1.0 first release
+* 1.0 First release
