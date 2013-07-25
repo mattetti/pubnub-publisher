@@ -1,7 +1,7 @@
 require "net/https"
 require "net/http"
 require "uri"
-require "cgi"
+require "erb"
 require "json"
 require "securerandom"
 require "pubnub/publisher/version"
@@ -109,7 +109,7 @@ module Pubnub
       raise ArgumentError if (channel.nil? || channel == "" || message.nil? || message == "")
 
       # prepare a GET request (come on pubnub, GET???)
-      url =  publish_url(channel) << "/#{CGI.escape(message.to_json)}"
+      url =  publish_url(channel) << "/#{ERB::Util.url_encode(message.to_json)}"
       uri = URI.parse(url)
       http = Net::HTTP.new(uri.host, uri.port)
 

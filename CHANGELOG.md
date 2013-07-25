@@ -1,5 +1,8 @@
 # Changelog
 
+* 1.0.3 Fixed another bug with the way the message content was being
+escaped/sent.
+
 * 1.0.2 Fixed a bug in the way the query was escaped.
 
 * 1.0.1 Added `Pubnub::Publisher.publish_key`,

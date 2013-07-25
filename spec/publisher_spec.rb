@@ -121,7 +121,7 @@ describe Pubnub::Publisher do
       expect(http.address).to eq("demo.pubnub.com")
       expect(http.use_ssl?).to be_true
       expect(http.port).to eq(443)
-      expect(request.path).to eq("/publish/demo_pub_key/demo_sub_key/0/mychannel/0/%7B%22text%22:%22hey%22%7D")
+      expect(request.path).to eq("/publish/demo_pub_key/demo_sub_key/0/mychannel/0/%7B%22text%22%3A%22hey%22%7D")
       expect(request).to be_instance_of(Net::HTTP::Get)
     end
 
